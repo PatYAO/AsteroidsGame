@@ -6,10 +6,10 @@ class Spaceship extends Floater
     xCorners = new int[]{-8,16,-8,2};
     yCorners = new int[]{-8,0,8,0};
     myColor = 255;
-    myCenterX = 250;
-    myCenterY = 250; //holds center coordinates   
-    myXspeed = 0;
-    myYspeed = 0; //holds the speed of travel in the x and y directions   
-    myPointDirection = 0; 
+    myCenterX = 250.0;
+    myCenterY = 250.0; //holds center coordinates   
+    myXspeed = 0.0;
+    myYspeed = 0.0; //holds the speed of travel in the x and y directions   
+    myPointDirection = 0.0; 
     }
 }

@@ -17,5 +17,17 @@ public void draw()
     stars[i].show();
   }
   //your code here
+if(keyPressed){
+if(key == a || key == A){
+ship.turn(-10);
+}
+if(key == d || key == D){
+ship.turn(10);
+}
+if(key == w || key == W){
+ship.accelerate(1);
+}
+}
+  ship.move();
   ship.show();
 }

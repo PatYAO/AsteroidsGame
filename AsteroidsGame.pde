@@ -18,13 +18,13 @@ public void draw()
   }
   //your code here
 if(keyPressed){
-if(key == a || key == A){
+if(key == 'a' || key == 'A'){
 ship.turn(-10);
 }
-if(key == d || key == D){
+if(key == 'd' || key == 'D'){
 ship.turn(10);
 }
-if(key == w || key == W){
+if(key == 'w' || key == 'W'){
 ship.accelerate(1);
 }
 }

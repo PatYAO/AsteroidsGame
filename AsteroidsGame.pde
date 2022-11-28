@@ -27,6 +27,9 @@ ship.turn(10);
 if(key == 'w' || key == 'W'){
 ship.accelerate(1);
 }
+if(key == 'h' || key == 'H'){
+  ship.hyperspace();
+}
 }
   ship.move();
   ship.show();

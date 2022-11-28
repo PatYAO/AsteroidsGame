@@ -12,4 +12,12 @@ class Spaceship extends Floater
     myYspeed = 0.0; //holds the speed of travel in the x and y directions   
     myPointDirection = 0.0; 
     }
+    
+    public void hyperspace(){
+    myCenterX = (Math.random() * 500);
+    myCenterY = (Math.random() * 500);
+    myXspeed = 0.0;
+    myYspeed = 0.0;
+    myPointDirection = (Math.random() * 360);
+    }
 }

@@ -43,6 +43,20 @@ if(key == 'h' || key == 'H'){
 if(key == 's' || key == 'S'){
   ship.accelerate(-1);
 } 
+if(key == CODED){
+    if (keyCode == LEFT){
+     ship.turn(-10); 
+    }
+    if(keyCode == RIGHT){
+     ship.turn(10);
+    }
+    if(keyCode == UP){
+      ship.accelerate(1);
+    }
+    if(keyCode == DOWN){
+      ship.accelerate(-1);
+    }
+}
 }
   ship.move();
   ship.show();

@@ -20,12 +20,16 @@ public void draw()
   for(int i = 0; i < stars.length; i++){
     stars[i].show();
   }
-  
+  for(int i = 0; i < rock.size();i++){
+    float d = dist((float)ship.myCenterX,(float)ship.myCenterY,(float)rock.get(i).myCenterX,(float)rock.get(i).myCenterY);
+    if(d < 20){
+    rock.remove(i);
+    }
+  }
   for(int i = 0; i < rock.size();i++){
     rock.get(i).move();
     rock.get(i).show();
   }
-  
   //your code here
 if(keyPressed){
 if(key == 'a' || key == 'A'){

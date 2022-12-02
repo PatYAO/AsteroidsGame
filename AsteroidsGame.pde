@@ -2,14 +2,16 @@
 Star [] stars = new Star[100];
 Spaceship ship;
 ArrayList<Asteroid> rock = new ArrayList<Asteroid>();
+
 public void setup() 
 {
   size(500,500);
   //your code here
+
   for(int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }
-  for(int i = 0; i < 10; i++){
+  for(int i = 0; i < 50; i++){
     rock.add(new Asteroid());
   }
    ship = new Spaceship();
@@ -47,6 +49,20 @@ if(key == 'h' || key == 'H'){
 if(key == 's' || key == 'S'){
   ship.accelerate(-1);
 } 
+if(key == 'g' || key == 'G'){
+  for(int i = 0; i < rock.size(); i++){
+    ship.myXspeed = 0.0;
+    ship.myYspeed = 0.0;
+    ship.myCenterX = rock.get(i).getX();
+    ship.myCenterY = rock.get(i).getY();
+  }
+}
+  if(key  == 'r' || key == 'R'){
+    for(int i = 0; i < 10; i++){
+    rock.add(new Asteroid());
+    }
+  }
+
 if(key == CODED){
     if (keyCode == LEFT){
      ship.turn(-10); 

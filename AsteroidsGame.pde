@@ -21,7 +21,7 @@ public void draw()
     stars[i].show();
   }
   for(int i = 0; i < rock.size();i++){
-    float d = dist((float)ship.myCenterX,(float)ship.myCenterY,(float)rock.get(i).myCenterX,(float)rock.get(i).myCenterY);
+    float d = dist((float)ship.getX(),(float)ship.getY(),(float)rock.get(i).getX(),(float)rock.get(i).getY());
     if(d < 20){
     rock.remove(i);
     }

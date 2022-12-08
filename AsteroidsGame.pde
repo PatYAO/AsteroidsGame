@@ -104,6 +104,7 @@ if(key == 'g' || key == 'G'){
       bill.add(new Bullet(ship));
       ship.turn(i);
     }
+    ship.turn(180);
    }
   }
 if(key == CODED){

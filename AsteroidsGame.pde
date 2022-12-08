@@ -1,6 +1,7 @@
 //your variable declarations here
 Star [] stars = new Star[100];
 Spaceship ship;
+ArrayList<Bullet> bill = new ArrayList<Bullet>();
 ArrayList<Asteroid> rock = new ArrayList<Asteroid>();
 
 public void setup() 
@@ -25,12 +26,25 @@ public void draw()
   for(int i = 0; i < rock.size();i++){
     float d = dist((float)ship.getX(),(float)ship.getY(),(float)rock.get(i).getX(),(float)rock.get(i).getY());
     if(d < 20){
-    rock.remove(i);
+      rock.remove(i);
+      break;
     }
+    for(int j = 0; j < bill.size(); j++){
+    float d2 = dist((float)bill.get(j).getbullX(),(float)bill.get(j).getbullY(),(float)rock.get(i).getX(),(float)rock.get(i).getY());
+    if(d2 < 20){
+        rock.remove(i);
+        bill.remove(j);
+        break;   
+    }
+   }
   }
   for(int i = 0; i < rock.size();i++){
     rock.get(i).move();
     rock.get(i).show();
+  }
+  for(int i = 0; i < bill.size(); i++){
+    bill.get(i).move();
+    bill.get(i).show();
   }
   //your code here
 if(keyPressed){
@@ -62,7 +76,28 @@ if(key == 'g' || key == 'G'){
     rock.add(new Asteroid());
     }
   }
-
+  if(key == 'e' || key == 'E'){
+    for(int i = 0; i < 10; i++){
+    bill.add(new Bullet(ship));
+    }
+  }
+  if(key == ' '){
+    bill.add(new Bullet(ship));
+  }
+  if(key == 'p' || key == 'P'){
+    for(int i = 0; i < rock.size(); i++){
+      rock.remove(i);
+    }
+    for(int i = 0; i < bill.size(); i++){
+      bill.remove(i);
+    }
+  }
+  if(key == 'c' || key == 'C'){
+    ship.myCenterX = 250;
+    ship.myCenterY = 250;
+    ship.myXspeed = 0;
+    ship.myYspeed = 0;
+  }
 if(key == CODED){
     if (keyCode == LEFT){
      ship.turn(-10); 

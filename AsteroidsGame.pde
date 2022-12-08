@@ -99,10 +99,12 @@ if(key == 'g' || key == 'G'){
     ship.myYspeed = 0;
   }
   if(key == 'q' || key == 'Q'){
+   if(bill.size() <  100){
     for(double i = 0.0; i < 360.0; i++){
       bill.add(new Bullet(ship));
       ship.turn(i);
     }
+   }
   }
 if(key == CODED){
     if (keyCode == LEFT){

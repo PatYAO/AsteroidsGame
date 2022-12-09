@@ -81,6 +81,7 @@ if(key == 'g' || key == 'G'){
     bill.add(new Bullet(ship));
     ship.turn((-5 + i));
     }
+    ship.turn(-30);
   }
   if(key == ' '){
     bill.add(new Bullet(ship));

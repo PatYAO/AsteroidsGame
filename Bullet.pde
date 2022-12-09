@@ -3,7 +3,7 @@ class Bullet extends Floater{
   myCenterX = ship.getX();
   myCenterY = ship.getY(); 
   myPointDirection = ship.getpointDir();
-  myColor = #696969;
+  myColor = #AF9B60
   accelerate(10);
 }
 public void show(){

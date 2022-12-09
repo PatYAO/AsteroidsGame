@@ -77,15 +77,16 @@ if(key == 'g' || key == 'G'){
     }
   }
   if(key == 'e' || key == 'E'){
-    for(int i = 0; i <= 50; i++){
+    for(int i = 0; i <= 15; i++){
     bill.add(new Bullet(ship));
-    if(i <=10){
+    if(i <= 10){
     ship.turn((-5 + i));
     }
     else if(i > 10){
       ship.turn(i-10);
     }
     ship.turn(-15);
+    }
   }
   if(key == ' '){
     bill.add(new Bullet(ship));

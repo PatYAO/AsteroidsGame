@@ -12,7 +12,7 @@ public void setup()
   for(int i = 0; i < stars.length; i++){
     stars[i] = new Star();
   }
-  for(int i = 0; i < 50; i++){
+  for(int i = 0; i < 100; i++){
     rock.add(new Asteroid());
   }
    ship = new Spaceship();

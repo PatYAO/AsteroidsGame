@@ -79,7 +79,9 @@ if(key == 'g' || key == 'G'){
   if(key == 'e' || key == 'E'){
     for(int i = 0; i < 10; i++){
     bill.add(new Bullet(ship));
+    ship.turn((-5 + i));
     }
+    ship.turn(-5);
   }
   if(key == ' '){
     bill.add(new Bullet(ship));

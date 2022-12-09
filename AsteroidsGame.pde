@@ -55,13 +55,13 @@ if(key == 'd' || key == 'D'){
 ship.turn(10);
 }
 if(key == 'w' || key == 'W'){
-ship.accelerate(1);
+ship.accelerate(0.1);
 }
 if(key == 'h' || key == 'H'){
   ship.hyperspace();
 }
 if(key == 's' || key == 'S'){
-  ship.accelerate(-1);
+  ship.accelerate(-0.1);
 } 
 if(key == 'g' || key == 'G'){
   for(int i = 0; i < rock.size(); i++){

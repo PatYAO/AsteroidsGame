@@ -77,7 +77,7 @@ if(key == 'g' || key == 'G'){
     }
   }
   if(key == 'e' || key == 'E'){
-  if(bill.size() < 300){
+  if(bill.size() < 100){
     for(int i = 0; i <= 15; i++){
     bill.add(new Bullet(ship));
     if(i <= 10){

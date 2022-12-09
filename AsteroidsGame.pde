@@ -111,9 +111,9 @@ if(key == 'g' || key == 'G'){
    if(bill.size() <  100){
     for(double i = 0.0; i < 360.0; i++){
       bill.add(new Bullet(ship));
-      ship.turn(i);
+      ship.turn(1);
     }
-    ship.turn(180);
+    
    }
   }
 if(key == CODED){
